@@ -68,6 +68,7 @@ GEM
       tzinfo (~> 2.0)
     ast (2.4.2)
     awesome_print (1.9.2)
+    blueprinter (0.25.3)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
     builder (3.2.4)
@@ -107,6 +108,7 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.14.2-arm64-darwin)
       racc (~> 1.4)
+    oj (3.14.2)
     parallel (1.22.1)
     parser (3.2.1.0)
       ast (~> 2.4.1)
@@ -195,7 +197,9 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  blueprinter
   bootsnap
+  oj
   pg (~> 1.1)
   pry-byebug
   pry-rails
