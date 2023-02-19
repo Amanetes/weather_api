@@ -1,0 +1,20 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 3.1.3
+  NewCops: enable
+  DisplayCopNames: true
+  Exclude:
+    - 'vendor/**/*'
+    - 'db/**/*'
+    - 'bin/**/*'
+    - 'log/**/*'
+    - 'tmp/**/*'
+    - 'node_modules/**/*'
+    - '.pryrc'
+
+Style/Documentation:
+  Enabled: false
