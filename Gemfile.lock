@@ -77,7 +77,15 @@ GEM
     concurrent-ruby (1.2.0)
     crass (1.0.6)
     date (3.3.3)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.12.0)
+    faraday (2.7.4)
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-net_http (3.0.2)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -125,6 +133,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.2)
     rack (2.2.6.2)
+    rack-attack (6.6.1)
+      rack (>= 1.0, < 3)
     rack-test (2.0.2)
       rack (>= 1.3)
     rails (7.0.4.2)
@@ -182,6 +192,7 @@ GEM
       rubocop (~> 1.33)
       rubocop-capybara (~> 2.17)
     ruby-progressbar (1.11.0)
+    ruby2_keywords (0.0.5)
     thor (1.2.1)
     timeout (0.3.2)
     tzinfo (2.0.6)
@@ -199,11 +210,14 @@ DEPENDENCIES
   awesome_print
   blueprinter
   bootsnap
+  dotenv-rails
+  faraday
   oj
   pg (~> 1.1)
   pry-byebug
   pry-rails
   puma (~> 5.0)
+  rack-attack
   rails (~> 7.0.4, >= 7.0.4.2)
   rubocop
   rubocop-performance

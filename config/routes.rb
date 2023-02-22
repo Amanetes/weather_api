@@ -1,8 +1,18 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  root 'api/v1/weather#current'
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      get '/current', to: 'weather#current'
+      get '/health', to: 'weather#health'
+      get '/historical', to: 'weather#historical'
+      get '/average', to: 'weather#average'
+      get '/min', to: 'weather#min'
+      get '/max', to: 'weather#max'
+      get 'by_time', to: 'weather#by_time'
+    end
+  end
+  # Redirect to root path on catch-all route
+  get '*path', to: redirect('/')
 end
