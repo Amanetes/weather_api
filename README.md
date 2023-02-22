@@ -2,6 +2,9 @@
 
 This is the simple Weather API application that shows weather based on location.
 Location is fetched automatically according to your current IP address.
+
+This application uses 'whenever gem' to update weather data at application startup and 1 hour update interval.
+
 All requests to API are throttled to 60rpm.
 
 1. Clone this project using:

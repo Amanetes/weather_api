@@ -13,12 +13,14 @@ gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'rack-attack'
 gem 'rails', '~> 7.0.4', '>= 7.0.4.2'
+gem 'rufus-scheduler'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
   gem 'dotenv-rails'
   gem 'pry-byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pry-rails'
+  gem 'rspec-rails', '~> 6.0.0'
 end
 
 group :development do
