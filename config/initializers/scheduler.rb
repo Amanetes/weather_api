@@ -15,4 +15,3 @@ scheduler.every '1h' do
   WeatherLoaderService.call
   Rails.logger.info "WeatherDataLoader called at #{Time.zone.now}"
 end
-

@@ -6,11 +6,13 @@ Rails.application.routes.draw do
     namespace :v1 do
       get '/current', to: 'weather#current'
       get '/health', to: 'weather#health'
-      get '/historical', to: 'weather#historical'
-      get '/average', to: 'weather#average'
-      get '/min', to: 'weather#min'
-      get '/max', to: 'weather#max'
-      get 'by_time', to: 'weather#by_time'
+      get '/by_time', to: 'weather#by_time'
+      namespace :historical do
+        get '/', to: 'weather#historical'
+        get '/average', to: 'weather#average'
+        get '/min', to: 'weather#min'
+        get '/max', to: 'weather#max'
+      end
     end
   end
   # Redirect to root path on catch-all route

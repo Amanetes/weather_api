@@ -18,3 +18,9 @@ AllCops:
 
 Style/Documentation:
   Enabled: false
+
+RSpec/LetSetup:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Max: 5

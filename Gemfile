@@ -18,6 +18,8 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
   gem 'dotenv-rails'
+  gem 'factory_bot_rails'
+  gem 'faker'
   gem 'pry-byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pry-rails'
   gem 'rspec-rails', '~> 6.0.0'
@@ -29,4 +31,9 @@ group :development do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
+end
+
+group :test do
+  gem 'shoulda-matchers', '~> 5.0'
+  gem 'database_cleaner-active_record'
 end

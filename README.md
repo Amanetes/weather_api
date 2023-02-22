@@ -30,12 +30,13 @@ git clone
 ```
 
 6. Endpoint reference :
-```html
-/health - Returns API status
-/current - Returns current temperature
-/historical - Returns historical temperature for last 24 hours
-/average - Returns average temperature for last 24 hours
-/max - Returns maximum temperature for last 24 hours
-/min - Returns minimum temperature for last 24 hours
-/by_time?input=#{input_time} - Returns temperature by time input. Input time should be Integer value (example: 1658915880)
+```bash
+GET / redirects to /api/v1/current, see below for reference
+GET /api/v1/health - Returns API status
+GET /api/v1/current - Returns current temperature
+GET /api/v1/historical - Returns historical temperature for last 24 hours
+GET /api/v1/historical/average - Returns average temperature for last 24 hours
+GET /api/v1/historical/max - Returns maximum temperature for last 24 hours
+GET /api/v1/historical/min - Returns minimum temperature for last 24 hours
+GET /api/v1/by_time?input={input_time} - Returns temperature by time input. Input time should be Integer value (example: 1658915880)
 ```
