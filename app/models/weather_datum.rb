@@ -10,5 +10,7 @@ class WeatherDatum < ApplicationRecord
   scope :min_temperature, -> { last_24_hours.order(temperature: :asc).first }
   scope :max_temperature, -> { last_24_hours.order(temperature: :desc).first }
   scope :avg_temperature, -> { last_24_hours.average(:temperature).floor(1) }
+  # The query calculates the absolute difference between the datetime column of the records and the input_time
+  # and orders the records by this difference in ascending order.
   scope :by_time, ->(input_time) { order(Arel::Nodes::SqlLiteral.new("ABS(datetime - #{input_time}) ASC")).first }
 end
